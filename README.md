@@ -1,19 +1,16 @@
-# Outlook Email App Redesign - Flutter Fully Responsive Design UI
+# outlook
 
-## [Watch it on YouTube](https://youtu.be/0mp-Ok00WZE)
+A new Flutter project.
 
+## Getting Started
 
- ### Flutter web work on beta make sure you change your channel, [Configure the flutter tool for web support](https://flutter.dev/docs/get-started/web)
+This project is a starting point for a Flutter application.
 
-**Packages we are using:**
+A few resources to get you started if this is your first Flutter project:
 
-- websafe_svg: [link](https://pub.dev/packages/websafe_svg)
-- flutter_staggered_grid_view: [link](https://pub.dev/packages/flutter_staggered_grid_view)
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.
-
-### Outlook Email App Redesign Responsive Final UI
-
-![Preview](/gif.gif)
-
-![App UI](/ui.png)
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

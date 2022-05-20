@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:outlook/models/Email.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../constants.dart';
+import '../../models/email.dart';
 import 'components/header.dart';
 
 class EmailScreen extends StatelessWidget {
-  const EmailScreen({
-    Key key,
-    this.email,
-  }) : super(key: key);
-
-  final Email email;
+  const EmailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +17,11 @@ class EmailScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Header(),
-              Divider(thickness: 1),
+              const Header(),
+              const Divider(thickness: 1),
               Expanded(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.all(kDefaultPadding),
+                  padding: const EdgeInsets.all(kDefaultPadding),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -35,7 +30,7 @@ class EmailScreen extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         backgroundImage: AssetImage(emails[1].image),
                       ),
-                      SizedBox(width: kDefaultPadding),
+                      const SizedBox(width: kDefaultPadding),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,14 +67,14 @@ class EmailScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                SizedBox(width: kDefaultPadding / 2),
+                                const SizedBox(width: kDefaultPadding / 2),
                                 Text(
                                   "Today at 15:32",
                                   style: Theme.of(context).textTheme.caption,
                                 ),
                               ],
                             ),
-                            SizedBox(height: kDefaultPadding),
+                            const SizedBox(height: kDefaultPadding),
                             LayoutBuilder(
                               builder: (context, constraints) => SizedBox(
                                 width: constraints.maxWidth > 850
@@ -88,7 +83,7 @@ class EmailScreen extends StatelessWidget {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
+                                    const Text(
                                       "Hello my love, \n \nSunt architecto voluptatum esse tempora sint nihil minus incidunt nisi. Perspiciatis natus quo unde magnam numquam pariatur amet ut. Perspiciatis ab totam. Ut labore maxime provident. Voluptate ea omnis et ipsum asperiores laborum repellat explicabo fuga. Dolore voluptatem praesentium quis eos laborum dolores cupiditate nemo labore. \n \nLove you, \n\nElvia",
                                       style: TextStyle(
                                         height: 1.5,
@@ -96,34 +91,36 @@ class EmailScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w300,
                                       ),
                                     ),
-                                    SizedBox(height: kDefaultPadding),
+                                    const SizedBox(height: kDefaultPadding),
                                     Row(
                                       children: [
-                                        Text(
+                                        const Text(
                                           "6 attachments",
                                           style: TextStyle(fontSize: 12),
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text(
                                           "Download All",
                                           style: Theme.of(context)
                                               .textTheme
                                               .caption,
                                         ),
-                                        SizedBox(width: kDefaultPadding / 4),
+                                        const SizedBox(
+                                            width: kDefaultPadding / 4),
                                         WebsafeSvg.asset(
-                                          "assets/Icons/Download.svg",
+                                          "assets/icons/Download.svg",
                                           height: 16,
                                           color: kGrayColor,
                                         ),
                                       ],
                                     ),
-                                    Divider(thickness: 1),
-                                    SizedBox(height: kDefaultPadding / 2),
+                                    const Divider(thickness: 1),
+                                    const SizedBox(height: kDefaultPadding / 2),
                                     SizedBox(
                                       height: 200,
                                       child: StaggeredGridView.countBuilder(
-                                        physics: NeverScrollableScrollPhysics(),
+                                        physics:
+                                            const NeverScrollableScrollPhysics(),
                                         crossAxisCount: 4,
                                         itemCount: 3,
                                         itemBuilder:

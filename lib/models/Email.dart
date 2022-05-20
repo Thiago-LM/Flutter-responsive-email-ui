@@ -6,39 +6,39 @@ class Email {
   final Color tagColor;
 
   Email({
-    this.time,
-    this.isChecked,
-    this.image,
-    this.name,
-    this.subject,
-    this.body,
-    this.isAttachmentAvailable,
-    this.tagColor,
+    required this.time,
+    required this.isChecked,
+    required this.image,
+    required this.name,
+    required this.subject,
+    required this.body,
+    required this.isAttachmentAvailable,
+    required this.tagColor,
   });
 }
 
 List<Email> emails = List.generate(
-  demo_data.length,
+  demoData.length,
   (index) => Email(
-    name: demo_data[index]['name'],
-    image: demo_data[index]['image'],
-    subject: demo_data[index]['subject'],
-    isAttachmentAvailable: demo_data[index]['isAttachmentAvailable'],
-    isChecked: demo_data[index]['isChecked'],
-    tagColor: demo_data[index]['tagColor'],
-    time: demo_data[index]['time'],
+    name: demoData[index]['name'],
+    image: demoData[index]['image'],
+    subject: demoData[index]['subject'],
+    isAttachmentAvailable: demoData[index]['isAttachmentAvailable'],
+    isChecked: demoData[index]['isChecked'],
+    tagColor: demoData[index]['tagColor'],
+    time: demoData[index]['time'],
     body: emailDemoText,
   ),
 );
 
-List demo_data = [
+List demoData = [
   {
     "name": "Apple",
     "image": "assets/images/user_1.png",
     "subject": "iPhone 12 is here",
     "isAttachmentAvailable": false,
     "isChecked": true,
-    "tagColor": null,
+    "tagColor": Colors.transparent,
     "time": "Now"
   },
   {
@@ -47,7 +47,7 @@ List demo_data = [
     "subject": "Inspiration for our new home",
     "isAttachmentAvailable": true,
     "isChecked": false,
-    "tagColor": null,
+    "tagColor": Colors.transparent,
     "time": "15:32"
   },
   {
@@ -56,7 +56,7 @@ List demo_data = [
     "subject": "Business-focused empowering the world",
     "isAttachmentAvailable": true,
     "isChecked": false,
-    "tagColor": null,
+    "tagColor": Colors.transparent,
     "time": "14:27",
   },
   {
@@ -65,7 +65,7 @@ List demo_data = [
     "subject": "The fastest way to Design",
     "isAttachmentAvailable": false,
     "isChecked": true,
-    "tagColor": Color(0xFF23CF91),
+    "tagColor": const Color(0xFF23CF91),
     "time": "10:43"
   },
   {
@@ -74,7 +74,7 @@ List demo_data = [
     "subject": "New job opportunities",
     "isAttachmentAvailable": false,
     "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
+    "tagColor": const Color(0xFF3A6FF7),
     "time": "9:58"
   }
 ];
